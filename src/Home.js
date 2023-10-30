@@ -27,6 +27,7 @@ const Home=()=>{
                     <ul>
                             {
                                 people.pets && people.pets
+                                .filter(person => person.type === 'Cat')
                                 .sort((a, b) => a.name.localeCompare(b.name))
                                 .map((cat, index) => (
                                     <li key={index}>{cat.name}</li>
